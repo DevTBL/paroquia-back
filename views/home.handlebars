@@ -1,0 +1,15 @@
+<h1>List of posts</h1>
+
+{{#each posts}}
+    <img src="data:image/jpeg;base64,{{photo}}" alt="Imagem do Post" width="300">
+    <hr>
+    <small>{{createdAt}}</small>
+    <h1>{{title}}</h1>
+    <div class="text-container" style="
+    max-width: auto;
+    padding: 10px;"/>
+        <pre style="text-wrap: wrap;">{{content}}</pre>
+    </div>
+    <a href="/delete/{{id}}"><button>Delete</button></a>
+    <hr>
+{{/each}}
