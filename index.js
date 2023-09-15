@@ -10,7 +10,7 @@ const Post = require('./models/Post');
 
 // Config
 // Permite requisição de outro endereço URL, CORS
-// Vai aceitar requisições apenas de :3000
+// Vai aceitar requisições apenas de :3000:
 const corsOptions = {
     origin: 'http://localhost:3000',
   };
