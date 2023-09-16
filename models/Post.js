@@ -1,20 +1,24 @@
 const db = require("./db");
+const { DataTypes } = require('sequelize');
 
 const Post = db.sequelize.define('post', {
     title: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     content: {
-        type: db.Sequelize.TEXT
+        type: DataTypes.TEXT
     },
     photo: {
-        type: db.Sequelize.BLOB('long') // Use BLOB para armazenar dados binários longos (imagens)
+        type: DataTypes.BLOB // Armazenar dados binários longos (imagens)
     },
     likes: {
-        type: db.Sequelize.INTEGER
+        type: DataTypes.INTEGER
     }
+}, {
+    tableName: 'posts',
+    timestamps: true,
 });
 
 module.exports = Post;
 
-//Post.sync({force: true})
+Post.sync();

@@ -1,8 +1,10 @@
-<form action="/send" method="POST" enctype="multipart/form-data">
+<form action="/api/create-post" method="POST" enctype="multipart/form-data">
     <p>Title: </p>
-    <input type="text" name="title" id="">
+    <label for=""></label><input type="text" name="title" id="">
     <p>Content: </p>
-    <textarea name="content"></textarea>
+    <label>
+        <textarea name="content"></textarea>
+    </label>
     <p>Image: </p>
     <input type="file" name="photo">
     <hr>

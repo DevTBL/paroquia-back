@@ -1,0 +1,8 @@
+.text-container {
+    max-width: auto;
+    padding: 10px;
+}
+
+pre {
+    text-wrap: wrap;
+}
